@@ -1,6 +1,6 @@
 # essensys Technical Test
 
-> [Link](https://rawgit.com/tariqkhan-co-uk/essensys/master/index.html)
+> [View the test](https://rawgit.com/tariqkhan-co-uk/essensys/master/index.html)
 
 The task is to build from the mockup supplied the test page as a fully responsive webpage. We have added into the mockup a table for call records, we'd like you to populate that table through importing the data in the CSV file, you can do this direct from the file or convert the file into JSON if you prefer working with JSON. We would also like JS show/hide accordion functionality added to the button in the mockup, that will display and then hide the table as it is clicked.
 
@@ -25,5 +25,5 @@ Below is a list highlighting features implemented:
 * I have presumed that you would want to trim the underscore from telephone data
 * Table data has been restyled as a list for mobile users to prevent horizontal scrolling
 * Other than the navigation list html taken from your site, all code has been written by me
-* I was tempted to use the [Link](https://github.com/tariqkhan-co-uk/TabaKordion">) jQuery TabaKordion (Show/Hide / Tabs / Accordion) plugin I had built, but coded it specifically for this test as requested using vanilla JavaScript
+* I was tempted to use the [jQuery TabaKordion](https://github.com/tariqkhan-co-uk/TabaKordion">) (Show/Hide / Tabs / Accordion) plugin I had built, but coded it specifically for this test as requested using vanilla JavaScript
 * Built most of the tests
