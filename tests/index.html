@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>QUnit Test Suite</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.21.0.css">
+</head>
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture">
+		<a href="#call-data" role="button" id="showHide">Table</a>
+		<div id="call-data">
+			<table id="table">
+				<caption class="access">An example of the call data we gather for each office in use</caption>
+				<thead>
+					<tr>
+						<th>Customer CLI</th>
+						<th>Telephon number</th>
+						<th>Call date</th>
+						<th>Call time</th>
+						<th>Duration</th>
+						<th>UK National</th>
+						<th>Time band</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="7">Please enable JavaScript</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<table id="test_table">
+			<caption class="access">An example of the call data we gather for each office in use</caption>
+			<thead>
+				<tr>
+					<th>Customer CLI</th>
+					<th>Telephon number</th>
+					<th>Call date</th>
+					<th>Call time</th>
+					<th>Duration</th>
+					<th>UK National</th>
+					<th>Time band</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="7">Please enable JavaScript</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script src="../script.js"></script>
+	<script src="http://code.jquery.com/qunit/qunit-1.21.0.js"></script>
+	<script>
+		var $toTest = $('#test_table'), toTest = document.getElementById('test_table');
+		QUnit.test('Table markup test', function(assert) {
+			assert.ok($toTest.length != 0, 'Table id exists');
+			assert.ok($toTest.find('caption').length != 0, 'Table caption exists');
+			assert.ok($toTest.find('thead').length != 0, 'Table head section exists');
+			assert.deepEqual($toTest.find('thead tr').length, 1, 'Table head section has 1 row');
+			assert.deepEqual($toTest.find('th').length, 7, 'Table head section has 5 columns');
+			assert.ok($toTest.find('tbody').length != 0, 'Table body section exists');
+			assert.deepEqual($toTest.find('tbody tr').length, 1, 'Table body section has 1 row');
+			assert.deepEqual($toTest.find('td').length, 1, 'Table body section has 1 column');
+			assert.ok($toTest.find('td').attr('colspan'), 7, 'Table body section has 1 column with a colspan of 7');
+		});
+		QUnit.test('Show loading status', function(assert) {
+			technicalTest.showStatus(toTest);
+			assert.ok($toTest.find('td').text() == 'Loading data...', 'Preloader displayed');
+		});
+		QUnit.test('Show error status', function(assert) {
+			technicalTest.showStatus(toTest, 'Error: Test error message');
+			assert.ok($toTest.find('td').text() == 'Error: Test error message', 'Error message displayed');
+		});
+		QUnit.test('Load data test', function(assert) {
+			technicalTest.loadData('Test_csv.csv', function(results) {
+				assert.ok(results, 'Data obtained from file');
+			});
+		});
+		QUnit.test('Load data failed test', function(assert) {
+			technicalTest.loadData('does_not_exist', function(results) {}, function(errors) {
+				assert.ok(errors, errors);
+			});
+		});
+		QUnit.test('Table population test', function(assert) {
+			technicalTest.loadData('does_not_exist', function(results) {}, function(errors) {
+				assert.ok($('#table').find('td').length >= 7, 'Table body section has 7 or more column');
+			});
+		});
+		$showHide = $('#showHide'), $showHidePanel = $($showHide.attr('href'));
+		QUnit.test('Show/hide button and panel markup test', function(assert) {
+			assert.ok($showHide.length != 0, 'Show/hide id exists');
+			assert.deepEqual($showHide.attr('role'), 'button', 'Show/hide role is set to button');
+			assert.ok($showHidePanel.length != 0, 'Show/hide panel exists and linked correctly');
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+	<meta charset="utf-8">
+	<title>Technical Test - essensys</title>
+	<!--[if ie]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	<meta name="author" content="Tariq Khan">
+	<meta name="description" content="Technical test for essensys">
+	<meta name="robots" content="index,follow,noodp">
+	<meta name="googlebot" content="noodp">
+	<meta name="revisit-after" content="30 days">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="essensys">
+	<meta name="application-name" content="essensys">
+	<link rel="stylesheet" type="text/css" media="all" href="style.css">
+</head>
+<body>
+	<div id="top">
+		<nav class="skiplinks">
+			<ul>
+				<li><a href="#navigation">Main site navigation</a></li>
+				<li><a href="#content">Skip to content</a></li>
+			</ul>
+		</nav>
+		<header id="header" class="header">
+			<a href="http://www.essensys.tech/" rel="home" class="logo"><img src="img/logo.png" alt="essensys"></a>
+			<nav id="navigation" class="navigation">
+				<a href="#navigation" class="trigger"><span class="access">Menu</span><div></div><div></div><div></div></a>
+				<ul>
+					<li>
+						<a href="http://www.essensys.tech/#section-about-essensys">About</a>
+						<ul>
+							<li><a href="http://www.essensys.tech/leadership/">Leadership</a></li>
+							<li><a href="http://www.essensys.tech/the-evolution/">Evolution</a></li>
+							<li><a href="http://www.essensys.tech/values/">Values</a></li>
+							<li><a href="http://www.essensys.tech/csr/">Giving Back</a></li>
+							<li><a href="http://www.essensys.tech/careers/">Careers</a></li>
+							<li><a href="http://www.essensys.tech/essensysnews/">News</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://www.essensys.tech/#section-our-technology">Tech</a>
+						<ul>
+							<li><a href="http://www.essensys.tech/jeff/">JEFF</a></li>
+							<li><a href="http://www.essensys.tech/bluefin/">Bluefin</a></li>
+							<li><a href="http://www.essensys.tech/essensyscloud/">essensysCloud</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://www.essensys.tech/#section-ecosystem">Ecosystem</a>
+						<ul>
+							<li><a href="http://www.essensys.tech/ecosystem-overview/">Ecosystem Information</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://www.essensys.tech/#section-flexible-workspace">Flexible Workspace</a>
+						<ul>
+							<li><a href="http://www.essensys.tech/flexibleworkspace-overview/">Flexible Workspace Information</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://www.essensys.tech/#section-smart-buildings">Smart Buildings</a>
+						<ul>
+							<li><a href="http://www.essensys.tech/a-new-era-of-smart-buildings/">Smart Buildings Information</a></li>
+							<li><a href="http://www.essensys.tech/smart-buildings-white-paper/">Download the Whitepaper</a></li>
+						</ul>
+					</li>
+					<li><a href="http://www.essensys.tech/#section-resources">Resources</a></li>
+					<li><a href="http://www.essensys.tech/blog/">Blog</a></li>
+					<li><a href="http://www.essensys.tech/#section-contact-us">Contact</a></li>
+					<li><a href="http://jeff.essensys.co.uk/jeff/">JEFF Login</a></li>
+					<li><a href="http://www.essensys.tech/#section-contact">DEMO</a></li>
+				</ul>
+				<a href="#top" class="back">Back</a>
+			</nav>
+		</header>
+		<section id="content" class="content">
+			<h1><span>Technical test</span></h1>
+			<img src="img/photo.jpg" alt="Photo of our office">
+			<p>The task is to build from the mockup supplied the test page as a fully responsive webpage. We have added into the mockup a table for call records, we'd like you to populate that table through importing the data in the CSV file, you can do this direct from the file or convert the file into JSON if you prefer working with JSON. We would also like JS show/hide accordion functionality added to the button in the mockup, that will display and then hide the table as it is clicked.</p>
+			<p>The mockup shows you the table column, you just need to add in the remaining data.</p>
+			<p><strong>Extra Credit:</strong> Build the tests you would build for this page to show the functionality has been correctly developed.</p>
+			<h2>Implementation</h2>
+			<p>Below is a list highlighting features implemented:</p>
+			<ul>
+				<li>The company logo is large in dimensions to cater for high-resolution devices</li>
+				<li>PNG images have been crushed and JPG images compressed</li>
+				<li>I have applied my own styling to the navigation to satisfy accessibility to AA standard</li>
+				<li>I have implemented a functional mobile menu/hamburger icon using just CSS and no javascript</li>
+				<li>I would normally use jQuery for ajax request as it is less convoluted and better error management</li>
+				<li>No frameworks or bootstraps have been used for greater scalability and as requested</li>
+				<li>I personally would not restrict the website width as per your design, but would provide support for 4K devices</li>
+				<li>The markup is symantically correct</li>
+				<li>It is responsive, x-browser and x-platform</li>
+				<li>This page supports accessiblity to a high standard; I am guessing AA as not tested</li>
+				<li>Table has a "no JavaScript" and "Loading" message</li>
+				<li>I have presumed that you would want to trim the underscore from telephone data</li>
+				<li>Table data has been restyled as a list for mobile users to prevent horizontal scrolling</li>
+				<li>Other than the navigation list html taken from your site, all code has been written by me</li>
+				<li>I was tempted to use the <a href="https://github.com/tariqkhan-co-uk/TabaKordion">jQuery TabaKordion</a> (Show/Hide / Tabs / Accordion) plugin I had built, but coded it specifically for this test as requested using vanilla JavaScript</li>
+				<li>Built most of the tests</li>
+			</ul>
+			<h2>Call data table</h2>
+			<p>The table below shows an example of the call data we gather for each office in use, to see more please click the button below.</p>
+			<a href="#call-data" role="button" id="showHide">Table <span class="access">of call data gathered for each office</span></a>
+			<div id="call-data">
+				<table id="table">
+					<caption class="access">An example of the call data we gather for each office in use</caption>
+					<thead>
+						<tr>
+							<th>Customer CLI</th>
+							<th>Telephon number</th>
+							<th>Call date</th>
+							<th>Call time</th>
+							<th>Duration</th>
+							<th>UK National</th>
+							<th>Time band</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="7">Please enable JavaScript</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<footer>
+			<p>&copy; 2016 essensys. All Rights Reserved.</p>
+			<p>essensys Ltd is a registered, limited company in England and Wales. Number: 05959557. Registered Office: 1 Triton Sq, Regents Place, London, NW1 3DX</p>
+		</footer>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
